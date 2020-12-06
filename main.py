@@ -10,12 +10,13 @@ import streamlit as st
 from models import run_sir
 from models import run_sird
 from models import run_seird
+from sirv import run_sirv
 
 
 st.title("Compartmental Models in Epidemiology")
 
 ## Sidebar Layout
-models = ['SIR','SIRD', 'SEIRD']
+models = ['SIR','SIRD', 'SEIRD', 'SIRV']
 model_opt = st.sidebar.selectbox("Select Model:", models)
 
 
@@ -57,3 +58,17 @@ if model_opt == models[2]:
     fig1, fig2 = run_seird(N,days,incub_pd,infec_pd,r0,ifr)
     st.plotly_chart(fig1)
     st.plotly_chart(fig2)
+
+if model_opt == models[3]:
+    N = st.sidebar.number_input("Population:", value=1000000)
+    r0 = st.sidebar.slider("Basic Reproduction Rate (R0):",0.0,10.0,2.5)
+    infec_pd = st.sidebar.slider("Infectious Period (days):",1.0,20.0,10.0)
+    days = st.sidebar.slider("Simulation Days:",1,730,250)
+    pFrac = st.sidebar.slider("Fraction of Population Vaccinated:",0.0,1.0,0.5)
+    pPeriod = st.sidebar.slider("Period over which vaccinated (days):",0,days,(30,90))
+    pStart = pPeriod[0]
+    pEnd = pPeriod[1]
+#    st.text(type(N))
+    
+    fig = run_sirv(N, days, infec_pd, r0, pStart,pEnd,pFrac)
+    st.plotly_chart(fig)
