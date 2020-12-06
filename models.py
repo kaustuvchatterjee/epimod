@@ -69,7 +69,7 @@ def run_sir(N, days, infectious_period, r0):
     
     # Layout
     fig.update_layout(title={"text": "SIR Model","x": 0.5,"y": .95,"xanchor": "center","yanchor": "bottom"}, #Title
-                      width=780, height=420, #Figure size
+                      width=740, height=420, #Figure size
                       margin=dict(r=20, b=10, l=10, t=10),
                       template = 'plotly_white', #Template {seaborn, plotly_white, dark}
                       showlegend = True
@@ -125,7 +125,7 @@ def run_sird(N, days, infectious_period, r0, ifr):
     
     # Layout
     fig1.update_layout(title={"text": "SIRD Model","x": 0.5,"y": 0.95,"xanchor": "center","yanchor": "bottom"}, #Title
-                      width=780, height=420, #Figure size
+                      width=740, height=420, #Figure size
                       margin=dict(r=20, b=10, l=10, t=10),
                       template = 'plotly_white', #Template {seaborn, plotly_white, dark}
                       showlegend = True
@@ -154,7 +154,7 @@ def run_sird(N, days, infectious_period, r0, ifr):
     
     # Layout
     fig2.update_layout(title={"text": "SIRD Model - Deaths","x": 0.5,"y": 0.95,"xanchor": "center","yanchor": "bottom"}, #Title
-                      width=780, height=420, #Figure size
+                      width=740, height=420, #Figure size
                       margin=dict(r=20, b=10, l=10, t=10),
                       template = 'plotly_white', #Template {seaborn, plotly_white, dark}
                       showlegend = False
@@ -212,7 +212,7 @@ def run_seird(N, days, incubation_period, infectious_period, r0, ifr):
     
     # Layout
     fig1.update_layout(title={"text": "SEIRD Model","x": 0.5,"y": 0.95,"xanchor": "center","yanchor": "bottom"}, #Title
-                      width=780, height=420, #Figure size
+                      width=740, height=420, #Figure size
                       margin=dict(r=20, b=10, l=10, t=10),
                       template = 'plotly_white', #Template {seaborn, plotly_white, dark}
                       showlegend = True
@@ -239,7 +239,7 @@ def run_seird(N, days, incubation_period, infectious_period, r0, ifr):
     
     # Layout
     fig2.update_layout(title={"text": "SEIRD Model - Deaths","x": 0.5,"y": 0.95,"xanchor": "center","yanchor": "bottom"}, #Title
-                      width=780, height=420, #Figure size
+                      width=740, height=420, #Figure size
                       margin=dict(r=20, b=10, l=10, t=10),
                       template = 'plotly_white', #Template {seaborn, plotly_white, dark}
                       showlegend = False
