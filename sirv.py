@@ -77,15 +77,12 @@ def run_sirv(N, days, infectious_period, r0, pStart,pEnd,pFrac):
 #                       ax=0, ay=0,
                        showarrow=True)
     
-    fig.add_vrect(
-    x0=pStart, x1=pEnd,
-    fillcolor="Green", opacity=0.25,
-    layer="above", line_width=1)
-        
 #    fig.add_vrect(
 #    x0=pStart, x1=pEnd,
-#    fillcolor="LightSalmon", opacity=0.5,
-#    layer="below", line_width=0,
-#),
+#    fillcolor="Green", opacity=0.25,
+#    layer="above", line_width=1)
+    
+    shape_dict = {'type':'rect', 'xref':'x', 'yref':'paper', 'x0':pStart, 'x1':pEnd, 'y0':0, 'y1':1, 'fillcolor': 'LightSalmon', 'layer': 'below', 'opacity': 0.25, 'line_width': 0}
+    fig.add_shape(shape_dict)
     
     return fig
