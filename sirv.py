@@ -12,7 +12,6 @@ import scipy.interpolate as spn
 import plotly.graph_objects as go
 
 
-
 def run_sirv(N, days, I0, R0, infectious_period, r0, pStart,pEnd,pFrac):
     gamma = 1/infectious_period
     beta = gamma*r0
