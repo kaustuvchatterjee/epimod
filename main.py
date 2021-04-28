@@ -72,5 +72,5 @@ if model_opt == models[3]:
     pEnd = pPeriod[1]
 #    st.text(type(N))
     
-    fig = run_sirv(N, days, I0, R0, infec_pd, r0, pStart,pEnd,pFrac)
+    fig = run_sirv(N, days, I0, R0, infec_pd, r0, pStart, pEnd, pFrac)
     st.plotly_chart(fig)
