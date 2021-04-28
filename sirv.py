@@ -13,12 +13,12 @@ import plotly.graph_objects as go
 
 
 
-def run_sirv(N, days, infectious_period, r0, pStart,pEnd,pFrac):
+def run_sirv(N, days, I0, R0, infectious_period, r0, pStart,pEnd,pFrac):
     gamma = 1/infectious_period
     beta = gamma*r0
 
-    I0 = 1
-    R0 = 0
+    # I0 = 1
+    # R0 = 0
     S0 = N-I0-R0
 
     t = np.linspace(1,days, days)
@@ -50,7 +50,7 @@ def run_sirv(N, days, infectious_period, r0, pStart,pEnd,pFrac):
     I = sol.y[1]
     
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=t,y=I, mode="lines", name="Infected", line={'dash': 'solid', 'color': 'red'}))
+    fig.add_trace(go.Scatter(x=t,y=I, mode="lines", name="Active Cases", line={'dash': 'solid', 'color': 'red'}))
     #X-Axis
     fig.update_xaxes(title_text='Days')
     
