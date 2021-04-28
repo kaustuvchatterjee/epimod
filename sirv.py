@@ -78,8 +78,6 @@ def run_sirv(N, days, I0, R0, infectious_period, r0, pStart,pEnd,pFrac):
     
     fig.add_vrect(
     x0=pStart, x1=pEnd,
-    y0=0,y1=1,
-    yref="paper",
     fillcolor="Green", opacity=0.25,
     layer="above", line_width=0)
         
