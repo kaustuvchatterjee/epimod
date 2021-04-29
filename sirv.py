@@ -12,13 +12,12 @@ import scipy.interpolate as spn
 import plotly.graph_objects as go
 
 
-
-def run_sirv(N, days, infectious_period, r0, pStart,pEnd,pFrac):
+def run_sirv(N, days, I0, R0, infectious_period, r0, pStart,pEnd,pFrac):
     gamma = 1/infectious_period
     beta = gamma*r0
 
-    I0 = 1
-    R0 = 0
+    # I0 = 1
+    # R0 = 0
     S0 = N-I0-R0
 
     t = np.linspace(1,days, days)
@@ -50,7 +49,7 @@ def run_sirv(N, days, infectious_period, r0, pStart,pEnd,pFrac):
     I = sol.y[1]
     
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=t,y=I, mode="lines", name="Infected", line={'dash': 'solid', 'color': 'red'}))
+    fig.add_trace(go.Scatter(x=t,y=I, mode="lines", name="Active Cases", line={'dash': 'solid', 'color': 'red'}))
     #X-Axis
     fig.update_xaxes(title_text='Days')
     
@@ -77,6 +76,14 @@ def run_sirv(N, days, infectious_period, r0, pStart,pEnd,pFrac):
 #                       ax=0, ay=0,
                        showarrow=True)
     
+<<<<<<< HEAD
+=======
+    fig.add_vrect(
+    x0=pStart, x1=pEnd,
+    fillcolor="Green", opacity=0.25,
+    layer="above", line_width=0)
+        
+>>>>>>> main
 #    fig.add_vrect(
 #    x0=pStart, x1=pEnd,
 #    fillcolor="Green", opacity=0.25,
