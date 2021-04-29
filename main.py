@@ -62,7 +62,7 @@ if model_opt == models[2]:
 if model_opt == models[3]:
     N = st.sidebar.slider("Population:", 1, 1387000000, 1387000000,100000)
     I0 = st.sidebar.slider("Active Cases:", 1, 10000000, 1, 1000)
-    R0 = st.sidebar.slider("Recovered:", 0, 100000000, 0, 1000)
+    R0 = st.sidebar.slider("Recovered:", 0, 1000000000, 0, 1000)
     r0 = st.sidebar.slider("Basic Reproduction Rate (R0):",0.0,10.0,2.5)
     infec_pd = st.sidebar.slider("Infectious Period (days):",1.0,20.0,10.0)
     days = st.sidebar.slider("Simulation Days:",1,365*5,365*2,100)
