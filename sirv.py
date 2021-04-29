@@ -76,14 +76,14 @@ def run_sirv(N, days, I0, R0, infectious_period, r0, pStart,pEnd,pFrac):
 #                       ax=0, ay=0,
                        showarrow=True)
     
-<<<<<<< HEAD
-=======
-    fig.add_vrect(
-    x0=pStart, x1=pEnd,
-    fillcolor="Green", opacity=0.25,
-    layer="above", line_width=0)
+# <<<<<<< HEAD
+# =======
+#     fig.add_vrect(
+#     x0=pStart, x1=pEnd,
+#     fillcolor="Green", opacity=0.25,
+#     layer="above", line_width=0)
         
->>>>>>> main
+# >>>>>>> main
 #    fig.add_vrect(
 #    x0=pStart, x1=pEnd,
 #    fillcolor="Green", opacity=0.25,
